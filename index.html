@@ -1,13 +1,159 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bn">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>S M Obidullah</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>S M Obidullah — Personal Site</title>
+  <style>
+    :root{
+      --brand:#2166d6;
+      --muted:#666;
+      --card:#ffffff;
+      --bg:#f3f6fb;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background:var(--bg);
+      color:#222;
+      -webkit-font-smoothing:antialiased;
+    }
+    header{
+      background:linear-gradient(90deg,var(--brand),#1b8fe6);
+      color:#fff;
+      padding:36px 16px;
+      text-align:center;
+    }
+    header h1{margin:0;font-size:28px;letter-spacing:0.4px}
+    header p{margin:6px 0 0;color:#dbeeff}
+
+    .wrap{
+      max-width:900px;
+      margin:-40px auto 40px;
+      padding:20px;
+    }
+
+    .card{
+      background:var(--card);
+      border-radius:12px;
+      box-shadow:0 8px 24px rgba(18,38,63,0.08);
+      padding:22px;
+      margin-bottom:18px;
+      text-align:center;
+    }
+
+    .profile {
+      display:flex;
+      gap:18px;
+      align-items:center;
+      justify-content:center;
+      flex-wrap:wrap;
+    }
+    .avatar{
+      width:150px;
+      height:150px;
+      border-radius:50%;
+      object-fit:cover;
+      border:6px solid rgba(255,255,255,0.6);
+      box-shadow:0 6px 20px rgba(0,0,0,0.12);
+      background:#eee;
+    }
+    .bio{
+      max-width:620px;
+      text-align:left;
+    }
+    .bio h2{margin:0 0 8px;font-size:20px}
+    .bio p{margin:0;color:var(--muted);line-height:1.6}
+
+    .links{margin-top:14px}
+    .links a{
+      display:inline-block;
+      margin:6px 8px;
+      padding:8px 14px;
+      background:transparent;
+      color:var(--brand);
+      border-radius:8px;
+      text-decoration:none;
+      border:1px solid rgba(33,102,214,0.12);
+      font-weight:600;
+    }
+
+    .gallery{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:14px;
+      margin-top:12px;
+    }
+    .gallery img{
+      width:100%;
+      height:220px;
+      object-fit:cover;
+      border-radius:10px;
+      box-shadow:0 8px 18px rgba(2,6,23,0.06);
+      transition:transform .25s ease;
+    }
+    .gallery img:hover{transform:scale(1.03)}
+
+    footer{
+      text-align:center;
+      color:var(--muted);
+      padding:18px 8px;
+      font-size:14px;
+    }
+
+    /* responsive small */
+    @media (max-width:520px){
+      .avatar{width:120px;height:120px}
+      .gallery img{height:160px}
+      header h1{font-size:22px}
+    }
+  </style>
 </head>
 <body>
-  <h1>S M Obidullah</h1>
-  <p>Home: Paikgacha, Khulna, Bangladesh</p>
-  <p>Facebook: <a href="https://www.facebook.com/share/17E2hU167D/" target="_blank">Visit My Facebook</a></p>
+  <header>
+    <h1>S M Obidullah</h1>
+    <p>Paikgacha, Khulna — Personal profile & gallery</p>
+  </header>
+
+  <div class="wrap">
+    <div class="card profile">
+      <!-- avatar: আপনার রিপো-র রুটে আপলোড করা ছবির নাম ব্যবহার করা হয়েছে -->
+      <img class="avatar" src="1739543983203_1.jpg" alt="S M Obidullah">
+      <div class="bio">
+        <h2>আমি এস এম ওবায়দুল্লাহ</h2>
+        <p>
+          আমি খুলনা জেলার পাইকগাছা উপজেলার বাসিন্দা। আমি একজন উদ্যমী তরুণ—নতুন কিছু শেখা ও নিজের স্কিল বাড়াতে আগ্রহী। প্রযুক্তি, সোশ্যাল মিডিয়া ও অনলাইনে পরিচিতি তৈরি করাই আমার লক্ষ্য। ভবিষ্যতে আমার কাজ আরও মানুষের কাছে পৌঁছুক—এই প্রত্যাশা করি।
+        </p>
+
+        <div class="links">
+          <!-- Facebook লিংক আপনার দেয়া লিংক ব্যবহার করা হয়েছে -->
+          <a href="https://www.facebook.com/share/17E2hU167D/" target="_blank" rel="noopener">Facebook</a>
+          <a href="mailto:yourmail@example.com">Email</a>
+          <a href="https://github.com/smobidullah89" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3 style="margin-top:0">My Photo Gallery</h3>
+      <div class="gallery">
+        <!-- নিচে প্রতিটি ছবির নাম আপনার রিপো-র রুটে আপলোড করা ফাইলনেম হিসেবে দেয়া আছে -->
+        <img src="1739543983203_1.jpg" alt="Photo 1">
+        <img src="1739544327892.jpg" alt="Photo 2">
+        <img src="1739544672145.jpg" alt="Photo 3">
+        <img src="1739604058437.jpg" alt="Photo 4">
+        <img src="1748967965740_3.jpg" alt="Photo 5">
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    &copy; <span id="year"></span> S M Obidullah — Paikgacha, Khulna. All rights reserved.
+  </footer>
+
+  <script>
+    document.getElementById('year').innerText = new Date().getFullYear();
+  </script>
 </body>
 </html>
